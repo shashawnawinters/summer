@@ -22,9 +22,7 @@ class EventsController < ApplicationController
       end
     end
 
-    get '/create' do
-      erb :form
-    end
+    
 
     get '/:id' do |id|
       user = User.find_by id
