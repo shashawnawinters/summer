@@ -13,6 +13,29 @@ class UsersController < ApplicationController
     # erb :event
   end	
 
+   # PATCH /users/:id
+  ##
+  patch '/:id/update' do |id|
+    # Update a single user
+    user = User.find id
+
+    user.update username: params['username'] || user.username, email: params['email'] || user.email, password: params['password'] || user.password
+
+    { status: 'ok', message: 'user updated' }.to_json
+  end
+
+  delete '/:id/delete' do |id|
+    # Delete a single userr
+    user = User.find id
+
+    if user
+      user.destroy
+      { status: 'ok', message: 'User deleted' }.to_json
+    else
+      { status: 'error', message: 'Cannot delete user' }.to_json
+    end
+  end
+
   #Logs user in and redirects to profile page
   post '/login/?' do
     user = User.find_by username: params['username']
