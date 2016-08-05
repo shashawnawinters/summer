@@ -11,7 +11,7 @@ class EventsController < ApplicationController
 
     post '/' do
       p session
-      if session[:is_logged_in]
+      if session[:is_logged_in] = true
         
         'false'
       else 
