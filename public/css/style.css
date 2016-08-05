@@ -1,0 +1,80 @@
+body {
+  background: #9DD9D2;
+  margin: 0;
+}
+a {
+  color: #392F5A;
+}
+body > header {
+  border-bottom: 2px solid #dedede;
+}
+body > header .container {
+  padding: 0 20px;
+}
+body > header .row {
+  padding: 1.5rem 0;
+}
+body > header h1 {
+  color: #392F5A;
+  font-family: 'helvitica Neue', Helvetica, Arial, sans serif;
+}
+body > header nav ul {
+  padding: 0;
+  margin: 0;
+  margin-top: 1.5rem;
+  list-style: none;
+  float: right;
+}
+body > header nav ul li {
+  display: inline-block;
+  font-size: 1.3rem;
+  margin-right: 1em;
+  margin-bottom: 10px;
+}
+body > header nav ul li:last-child {
+  margin-right: 5px;
+}
+body > main form {
+  text-align: center;
+  padding: 10px;
+  color: #272727;
+}
+body > main form input {
+  width: 400px;
+  padding: 5px 10px;
+  margin: 4px 0;
+  border-radius: 4px;
+  border: 1px solid #272727;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.mid-section {
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: url('https://hd.unsplash.com/photo-1467321638755-7246fd0dc1f3');
+}
+h2,
+p {
+  color: #272727;
+  text-align: center;
+}
+button {
+  border-radius: 10px;
+  background-color: #FFF8F0;
+}
+.submit {
+  text-align: center;
+  display: block;
+  margin: 5px auto;
+  width: 150px;
+  height: 75px;
+}
+img,
+object,
+embed {
+  max-width: 100%;
+}
+img {
+  height: auto;
+}

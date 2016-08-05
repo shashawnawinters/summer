@@ -1,0 +1,31 @@
+<div class="container mid-section">
+  <div class="row">
+    <div class="col-12 centered-text">
+      <h2>Welcome Back <%= username.capitalize %></h2>
+    </div>
+  </div>
+</div>
+
+
+<main class="container">
+  <div>
+    <form method="get" action="/#" accept-charset="utf-8">
+     <input class="searchinput" name="eventsearch" placeholder="Search..."/>
+     <button class="search" type="submit" name="submit">Search</button>
+    </form>
+  </div>
+  <div class="row">
+    <div class="col-12 centered-text">
+      <h2>Feautured Free Events In Chicago</h2>
+      <div class="results-li"></div>
+      <div class="results"></div>
+    <form method="post" action="/users/logout">
+      <button type="submit">Logout</button>
+    </form>
+    </div>
+  </div>
+
+</main>
+
+
+

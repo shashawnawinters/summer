@@ -1,0 +1,27 @@
+  <div class="container mid-section">
+    <div class="row">
+      <div class="col-12 centered-text">
+        <h2>Your guide to Summer Time Chicago free events!</h2>
+        <%= message %>
+      </div>
+    </div>
+  </div>
+
+<main class="container">
+    <div class="row">
+      <div class="col-12">  
+        <h2>Log in to Checkout Cool Free Events</h2>
+        <form method="post" action="/users/login">
+          <input type="text" name="username" placeholder="Username" required />
+          <br />
+          <input type="password" name="password" placeholder="Password" required />
+          <br />
+          <button type="submit">Submit</button>
+          <br />
+          Dont have an account?<a href="/register">Sign Up</a>
+        </form>
+      </div>
+    </div>
+  </main>
+
+

@@ -1,0 +1,29 @@
+<main> 
+
+  <h1>Create a New Events</h1>
+    <p>Complete the form to create a free event in your area!</p>
+
+  <form method="post" action="/events/create" accept-charset="utf-8">
+    <input type="text" name="event" placeholder="Name of Event" required />
+    <br />
+    <input type="date" name="event_date" placeholder="date" required/>
+    <br />
+    <input type="text" name="address" placeholder="Address of Location" required />
+    <br />
+    <input type="text" name="image_url" placeholder="Image URL" required />
+    <br />
+    <label for="name">Event Type</label>
+      <select name="category" required />
+        <option value=""></option>
+        <option value="parties">Parties</option>
+        <option value="music">Music</option>
+        <option value="food">Food and Drinks</option>
+        <option value="classes">Classes</option>
+        <option value="arts">Arts</option>
+        <option value="sports">Sports and Wellness</option>
+        <option value="networking">Networking</option>
+        <br>
+    <textarea rows="4" cols="50" name="description" placeholder="Event Description"></textarea>
+    <button type="submit" onclick="alert('Form Submitted')">Submit</button>
+  </form>
+</main>  

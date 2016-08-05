@@ -1,0 +1,126 @@
+@black: #272727;
+@white: #f7f7f7;
+@gray:  #505050;
+@blue:  #00008B;
+@ltBlue: #ADD8E6;
+@yellow: #F4D06F;
+@orange: #FF8811;
+@paleBlue: #9DD9D2;
+@purple: #392F5A;
+@offWhite: #FFF8F0;
+
+body {
+  background: @paleBlue;
+  margin: 0;
+}
+
+a {
+  color: @purple;
+}
+
+body > header { 
+  border-bottom: 2px solid darken(@white, 10%);
+
+  .container {
+    padding: 0 20px;
+  }
+
+  .row {
+    padding: 1.5rem 0;
+  }
+
+  h1 {
+    color: @purple;
+    font-family: 'helvitica Neue', Helvetica, Arial,  sans serif;
+  }
+
+  nav{
+    ul{
+      padding: 0;
+      margin: 0;
+      margin-top: 1.5rem;
+      list-style: none;
+      float: right;
+
+      li {
+        display: inline-block;
+        font-size: 1.3rem;
+        margin-right: 1em;
+        margin-bottom: 10px;
+        
+        &:last-child { margin-right: 5px; }
+      }
+    }
+  }
+}
+
+body > main {
+
+  form {
+    text-align: center;
+    padding:    10px;
+    color:      @black;
+
+    input {
+      width:    400px;
+      padding:  5px 10px;
+      margin:   4px 0;
+      border-radius: 4px;
+      border:   1px solid @black;
+      box-sizing:    border-box;
+      display:  inline-block; 
+    }
+  }
+}
+
+.mid-section {
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  background-image: url('https://hd.unsplash.com/photo-1467321638755-7246fd0dc1f3') 
+}
+
+h2, p {
+  color: @black;
+  text-align: center;
+}
+
+button  {
+  border-radius: 10px;
+  background-color: @offWhite;
+}
+
+.submit {
+  text-align: center;
+  display: block;
+  margin: 5px auto;
+  width: 150px;
+  height: 75px;
+}
+
+
+//:::: Helper Classes :::://
+
+// The micro clearfix hack (more of a technique than hack)
+// http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix() {
+  *zoom:1;
+  
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+// A little help for responsive images
+img, object, embed {
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}

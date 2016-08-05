@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Summer in Chicago</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+ 
+<body>
+  <header class="container">
+    <div class="row">
+      <div class="col-7 centered-text">
+        <h1>Summer in Chicago</h1>
+      </div>
+      <nav class="col-5">
+      <form method="get" action="/events/create">  
+        <ul>
+          <li><a href="/users/events">My Events</a></li>
+          <li><a href="/events/create">Create Event</a></li>
+        </ul>
+      </form>
+      </nav>
+    </div>
+  </header>
+
+
+  <%= yield %>
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.js"></script> 
+  <script src="js/app.js"></script>
+</body>
+</html>
