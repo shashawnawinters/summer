@@ -43,8 +43,14 @@ $('.search').on("click", function(event) {
           t.shift();
           time = t.toString();
 
+
+
           // console.log(number.context.parentNode.value)
           console.log('-----------------OBJECT NAME--------------------------')
+
+          $('body').append('<p>' + myData.events[number.context.parentNode.value].name.text + '</p>' ),
+          $('body').append('<p>' + myData.events[number.context.parentNode.value].description.text + '</p>' );
+
           console.log(myData.events[number.context.parentNode.value].name.text)
           console.log('-----------------OBJECT DESCRIPTION--------------------------')
           console.log(myData.events[number.context.parentNode.value].description.text)
