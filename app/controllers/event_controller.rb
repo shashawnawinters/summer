@@ -22,7 +22,7 @@ class EventsController < ApplicationController
       end
     end
 
-   
+
 
     get '/:id' do |id|
       user = User.find_by id

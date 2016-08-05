@@ -31,8 +31,17 @@ $('.search').on("click", function(event) {
 
       for (var i = 0; i < data.events.length; i++) {
         // console.log(data.events[i], 'this is data.events[i]')
-        $('.results').append('<li value="' + i + '"><a id="event' + i + '"href="#">' + data.events[i].name.text + '</a></li>').on('click', 'a', function(){
-          var myData = grabData()
+        $('.results').append('<li value="' + i + '"><a id="event' + i + '"href="#">' + data.events[i].name.text + '</a></li>').on('click', 'a', function(e){
+          e.preventDefault();
+          var myData = data.events.filter(function(event, j) {
+            return event.name.text === data[i].name.text;
+          });
+          console.log(myData, 'FILTERED');
+          var event = myData[0];
+          $('#details').append('<h1>' + event.name + '</h1>');
+          $('#details').append('<p>' + event.capacity + '</p>');
+          $('#details').append('<p>' + event.currency + '</p>');
+          // var myData = grabData()
         
           var number = $(this)
           var date = myData.events[number.context.parentNode.value].start.local.substr(0, 10).split('-');
