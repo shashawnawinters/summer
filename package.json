@@ -1,0 +1,23 @@
+{
+  "name": "summer_in_chicago_project",
+  "version": "1.0.0",
+  "description": "project 3 event app",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/shashawnawinters/project3.git"
+  },
+  "author": "Shashawna Winters <shashawnawinters@yahoo.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/shashawnawinters/project3/issues"
+  },
+  "homepage": "https://github.com/shashawnawinters/project3#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.1.0"
+  }
+}
