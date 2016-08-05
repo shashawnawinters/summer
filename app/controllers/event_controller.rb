@@ -9,19 +9,19 @@ class EventsController < ApplicationController
   end
 
 
-    post '/' do
+    post '/' do 
       p session
-      if session[:is_logged_in] = true
-        
-        'false'
+      if !session[:is_logged_in]
+        erb :event, locals: {message: 'You need to log in before adding an event'}
       else 
-        erb :event, locals: {message: 'You must log in to create an event'}
+        id = session[:user_id]
+        user = User.find id
+        event = user.events.create user_id: session[:user_id], name: params['event'], description: params['description'], image_url: params['image_url'], location: params['address'], date: params['event_date'], time: params['time'], category: params['category']
+        p event
+        redirect 'users/' + session[:user_id].to_s
       end
     end
 
-    get '/create' do
-      erb :form
-    end
 
     get '/:id' do |id|
       user = User.find_by id
