@@ -22,6 +22,7 @@ class EventsController < ApplicationController
       end
     end
 
+   
 
     get '/:id' do |id|
       user = User.find_by id
@@ -29,6 +30,7 @@ class EventsController < ApplicationController
       session[:user_id] = user.event.user_id
       puts '--------session--------'
       p session
+      session[:user_id]
       puts '-----------------------'
 
 
@@ -49,12 +51,14 @@ class EventsController < ApplicationController
     end
 
     get '/?' do 
-      data = @data
-      session[:is_logged_in] = true
       puts '--------session--------'
       p session
       puts '-----------------------'
-      erb :my_events 
+      if session[:is_logged_in]
+        erb :form
+      else
+        erb :event, locals: {message: 'Must log in'}
+      end
     end
 
 
