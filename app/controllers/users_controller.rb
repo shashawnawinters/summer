@@ -24,6 +24,7 @@ class UsersController < ApplicationController
         session[:is_logged_in] = true
         session[:user_id] = user.id
         p session
+        current_user = session
         redirect 'users/' + session[:user_id].to_s
       else
         incorrect = 'Incorrect Username or Password'
