@@ -1,5 +1,3 @@
-
-
 arr = []
 
 
@@ -75,12 +73,5 @@ $('.search').on("click", function(event) {
 function grabData(){
   return Data;
 }
-
-
-
-
-
-
-
 
 
