@@ -16,14 +16,14 @@ class UsersController < ApplicationController
 
   delete '/:id/?' do |id|
     # Delete a single userr
-    user = User.find_by id()
+    user = User.find_by id
     console.log(user)
 
     if user
       user.destroy
-      { status: 'ok', message: 'User deleted' }.to_json
+      erb :login, { status: 'ok', message: 'User deleted' }.to_json
     else
-      { status: 'error', message: 'Error' }.to_json
+      erb :login, { status: 'error', message: 'Error' }.to_json
     end
   end
 
